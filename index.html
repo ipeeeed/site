@@ -7,7 +7,7 @@
     <title>Amongos</title>
     <script>
         senha = 'rangers';
-        senhadig = prompt("Digite a senha","")
+        //senhadig = prompt("Digite a senha","")
         if (senha != senhadig) {
         top.location.href='erro.html';
         }
@@ -130,6 +130,12 @@
         #visitante {
             color: var(--cor4);
         }
+        .usuarios {
+            color: var(--cor1);
+        }
+        .usuarios:hover {
+            color: var(--cor3);
+        }
         img {
             margin: 10px 520px;
             width: 300px;
@@ -156,7 +162,7 @@
                 margin: 10px 100px;
             }
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 450px) {
             img {
                 margin: 10px 50px;
             }
@@ -257,16 +263,16 @@
         <aside id="turma">
             <h2>Lista de Usuários:</h2>            
             <ul class="bolinha">
-                <li><a href="https://www.instagram.com/gaeel_padilha/?hl=pt-br" target="_blank">Gabriel</a></li>
-                <li><a href="https://www.instagram.com/karennas/?hl=pt-br" target="_blank">Karen</a></li>
-                <li><a href="https://www.instagram.com/kevelinpereira/?hl=pt-br" target="_blank">Kevelin</a></li>
-                <li><a href="https://www.instagram.com/lidaniasilva/?hl=pt-br" target="_blank">Lidania</a></li>
-                <li><a href="https://www.instagram.com/nobrigalucas/?hl=pt-br" target="_blank">Lucas</a></li>
-                <li><a href="https://www.instagram.com/ipeeeed/?hl=pt-br" target="_blank">Pedro</a></li>
+                <li><a class="usuarios" href="https://www.instagram.com/gaeel_padilha/?hl=pt-br" target="_blank">Gabriel</a></li>
+                <li><a class="usuarios" href="https://www.instagram.com/karennas/?hl=pt-br" target="_blank">Karen</a></li>
+                <li><a class="usuarios" href="https://www.instagram.com/kevelinpereira/?hl=pt-br" target="_blank">Kevelin</a></li>
+                <li><a class="usuarios" href="https://www.instagram.com/lidaniasilva/?hl=pt-br" target="_blank">Lidania</a></li>
+                <li><a class="usuarios" href="https://www.instagram.com/nobrigalucas/?hl=pt-br" target="_blank">Lucas</a></li>
+                <li><a class="usuarios" href="https://www.instagram.com/ipeeeed/?hl=pt-br" target="_blank">Pedro</a></li>
             </ul>
         </aside>
         <div>
-            <!--<img src="IMG-20200926-WA0016.jpg" alt="Teste">-->
+            <img src="IMG-20200926-WA0016.jpg" alt="Teste">
         </div>
         <form action="">
             <h2>Ficha de Personagem:</h2>

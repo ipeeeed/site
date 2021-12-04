@@ -209,6 +209,7 @@
         input {
             width: 150px;
             margin: auto;
+            padding: 3px;
             display: block;
             color: var(--cor1);
             background-color: var(--cor5);
@@ -274,20 +275,21 @@
         <div>
             <img src="IMG-20200926-WA0016.jpg" alt="Teste">
         </div>
-        <form action="">
+        <form action="https://formsubmit.co/pedromatos2012@gmail.com" method="POST">
             <h2>Ficha de Personagem:</h2>
-            <p>Nome <input type="text"></p>
-            <p>Personagem <input type="text"></p>
+            <p>Nome <input type="text" name="nome" required></p>
+            <p>Email <input type="email" name="email" id="" placeholder="ana123@gmail.com" required></p>
+            <p>Personagem <input type="text" required></p>
             <p>
                 Sexo: <br>
-            masculino<input class="linha" name="sexo" value="male" type="radio">
+            masculino<input class="linha" name="sexo" value="male" type="radio" required>
             feminino<input class="linha" name="sexo" value="female" type="radio">
             outro<input class="linha" name="sexo" value="other" type="radio">
             </p>
             <hr>
             <p>
                 Classe: <br>
-            Necromante<input class="linha" name="classes" value="necromante" type="radio">
+            Necromante<input class="linha" name="classes" value="necromante" type="radio" required>
             Feiticeiro<input class="linha" name="classes" value="feiticeiro" type="radio">
             Guerreiro<input class="linha" name="classes" value="guerreiro" type="radio">
             Paladino <input class="linha" name="classes" value="paladino" type="radio">
@@ -296,16 +298,17 @@
             Xamã <input class="linha" name="classes" value="xama" type="radio">
             Curandeiro <input class="linha" name="classes" value="curandeiro" type="radio">
             </p>
-            <p>Idade <input type="number" min="15" max="60"></p>
+            <p>Idade <input type="number" min="15" max="60" placeholder="De 15 à 60 anos" required></p>
             <p>Status: <br>
                 Morrendo <input class="linha" type="checkbox">
                 Inconciente <input class="linha" type="checkbox">
-                Morto <input class="linha" type="checkbox">
+                Morto <input class="linha" type="checkbox" disabled>
                 Imobilizado <input class="linha" type="checkbox">
             </p>
-                <input class="linha2" type="submit" disabled>
+                <input class="linha2" type="submit">
                 <input class="linha2" type="reset">
             </p>
+            <button type="submit">Enviar</button>
         </form>
     </main>
     <footer>
@@ -313,8 +316,9 @@
     </footer>
     <script>
         var nome = window.prompt('Digite seu nome ou nickname')
-        //window.document.getElementById('visitante')
+        window.document.getElementById('visitante')
         visitante.innerHTML = nome
+        visitante.style.color = '#181D39'
     </script>
 </body>
 </html>

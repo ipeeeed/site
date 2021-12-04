@@ -284,10 +284,24 @@
             feminino<input class="linha" name="sexo" value="female" type="radio">
             outro<input class="linha" name="sexo" value="other" type="radio">
             </p>
+            <hr>
+            <p>
+                Classe: <br>
+            Necromante<input class="linha" name="classes" value="necromante" type="radio">
+            Feiticeiro<input class="linha" name="classes" value="feiticeiro" type="radio">
+            Guerreiro<input class="linha" name="classes" value="guerreiro" type="radio">
+            Paladino <input class="linha" name="classes" value="paladino" type="radio">
+            Ladino <input class="linha" name="classes" value="ladino" type="radio">
+            Arqueiro <input class="linha" name="classes" value="arqueiro" type="radio">
+            Xamã <input class="linha" name="classes" value="xama" type="radio">
+            Curandeiro <input class="linha" name="classes" value="curandeiro" type="radio">
+            </p>
             <p>Idade <input type="number" min="15" max="60"></p>
-            <p>Classe: <br>
-                Ladino <input class="linha" type="checkbox">
-                Necromante <input class="linha" type="checkbox">
+            <p>Status: <br>
+                Morrendo <input class="linha" type="checkbox">
+                Inconciente <input class="linha" type="checkbox">
+                Morto <input class="linha" type="checkbox">
+                Imobilizado <input class="linha" type="checkbox">
             </p>
                 <input class="linha2" type="submit" disabled>
                 <input class="linha2" type="reset">
@@ -299,7 +313,7 @@
     </footer>
     <script>
         var nome = window.prompt('Digite seu nome ou nickname')
-        window.document.getElementById('visitante')
+        //window.document.getElementById('visitante')
         visitante.innerHTML = nome
     </script>
 </body>

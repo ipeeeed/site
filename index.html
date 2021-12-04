@@ -280,7 +280,7 @@
             <h2>Ficha de Personagem:</h2>
             <p>Nome <input type="text" name="nome" required></p>
             <p>Email <input type="email" name="email" id="" placeholder="ana123@gmail.com" required></p>
-            <p>Personagem <input type="text" required></p>
+            <p>Personagem <input type="text" name="personagem" required></p>
             <p>
                 Sexo: <br>
             masculino<input class="linha" name="sexo" value="male" type="radio" required>
@@ -299,12 +299,12 @@
             Xamã <input class="linha" name="classes" value="xama" type="radio">
             Curandeiro <input class="linha" name="classes" value="curandeiro" type="radio">
             </p>
-            <p>Idade <input type="number" min="15" max="60" placeholder="De 15 à 60 anos" required></p>
+            <p>Idade <input type="number" name="idade" min="15" max="60" placeholder="De 15 à 60 anos" required></p>
             <p>Status: <br>
-                Morrendo <input class="linha" type="checkbox">
-                Inconciente <input class="linha" type="checkbox">
-                Morto <input class="linha" type="checkbox" disabled>
-                Imobilizado <input class="linha" type="checkbox">
+                Morrendo <input class="linha" name="status" type="checkbox">
+                Inconciente <input class="linha" name="status" type="checkbox">
+                Morto <input class="linha" name="status" type="checkbox" disabled>
+                Imobilizado <input class="linha" name="status" type="checkbox">
             </p>
                 <input class="linha2" type="submit">
                 <input class="linha2" type="reset">

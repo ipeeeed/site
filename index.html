@@ -7,7 +7,7 @@
     <title>Amongos</title>
     <script>
         senha = 'rangers';
-        senhadig = prompt("Digite a senha","")
+        //senhadig = prompt("Digite a senha","")
         if (senha != senhadig) {
         top.location.href='erro.html';
         }
@@ -74,6 +74,9 @@
             nav > ul > li > a {
                 padding: 10px 10px;
             }
+        }
+        section {
+            margin: 5px 30px;
         }
         .bolinha {
             list-style-type: none;
@@ -214,15 +217,39 @@
             color: var(--cor1);
             background-color: var(--cor5);
         }
+        textarea {
+            width: 150px;
+            margin: auto;
+            padding: 3px;
+            display: block;
+            color: var(--cor1);
+            background-color: var(--cor5);
+        }
         .linha {
             width: 20px;
             display: inline;
         }
         .linha2 {
             display: inline;
+        }        
+        .separasexo {
+            display: block;
+            width: 150px;
+            padding: 1px;
+            margin: 2px auto;
+            border: 2px;
+            background-color: var(--cor5);
+            border-radius: 5px;
         }
-        #historia {
-            padding: 20px 3px;
+        .separaclasse {
+            display: block;
+            width: 150px;
+            padding: 1px;
+            margin: 2px auto;
+            border: 2px;
+            background-color: var(--cor5);
+            border-radius: 5px;
+            
         }
         footer {
             background-color: var(--cor7);
@@ -287,23 +314,23 @@
             <p>Email <input type="email" name="email" id="" placeholder="ana123@gmail.com" required></p>
             <p>Personagem <input type="text" name="personagem" required></p>
             <p>História <input type="text" name="historia" required id="historia"></p>
+            <p>História <textarea name="" id="" cols="30" rows="10"></textarea></p>
             <p>
                 Sexo: <br>
-            masculino<input class="linha" name="sexo" value="male" type="radio" required>
-            feminino<input class="linha" name="sexo" value="female" type="radio">
-            outro<input class="linha" name="sexo" value="other" type="radio">
+            <span class="separasexo">masculino<input class="linha" name="sexo" value="male" type="radio" required></span>
+            <span class="separasexo">feminino<input class="linha" name="sexo" value="female" type="radio"></span>
+            <span class="separasexo">outro<input class="linha" name="sexo" value="other" type="radio"></span>
             </p>
-            <hr>
             <p>
                 Classe: <br>
-            Necromante<input class="linha" name="classes" value="necromante" type="radio" required>
-            Feiticeiro<input class="linha" name="classes" value="feiticeiro" type="radio">
-            Guerreiro<input class="linha" name="classes" value="guerreiro" type="radio">
-            Paladino <input class="linha" name="classes" value="paladino" type="radio">
-            Ladino <input class="linha" name="classes" value="ladino" type="radio">
-            Arqueiro <input class="linha" name="classes" value="arqueiro" type="radio">
-            Xamã <input class="linha" name="classes" value="xama" type="radio">
-            Curandeiro <input class="linha" name="classes" value="curandeiro" type="radio">
+            <span class="separaclasse">Necromante<input class="linha" name="classes" value="necromante" type="radio" required></span>
+            <span class="separaclasse">Feiticeiro<input class="linha" name="classes" value="feiticeiro" type="radio"></span>
+            <span class="separaclasse">Guerreiro<input class="linha" name="classes" value="guerreiro" type="radio"></span>
+            <span class="separaclasse">Paladino <input class="linha" name="classes" value="paladino" type="radio"></span>
+            <span class="separaclasse">Ladino <input class="linha" name="classes" value="ladino" type="radio"></span>
+            <span class="separaclasse">Arqueiro <input class="linha" name="classes" value="arqueiro" type="radio"></span>
+            <span class="separaclasse">Xamã <input class="linha" name="classes" value="xama" type="radio"></span>
+            <span class="separaclasse">Curandeiro <input class="linha" name="classes" value="curandeiro" type="radio"></span>
             </p>
             <p>Idade <input type="number" name="idade" min="15" max="60" placeholder="De 15 à 60 anos" required></p> <br>
             <!--<p>Status: <br>
@@ -322,7 +349,7 @@
         <marquee behavior="" direction="left">Socorram-me, subi no ônibus em Marrocos. As tranças do rei careca. O rato roeu a roupa do rei de roma. Três pratos de trigo para três tigres tristes.</marquee>
     </footer>
     <script>
-        var nome = window.prompt('Digite seu nome ou nickname')
+        //var nome = window.prompt('Digite seu nome ou nickname')
         window.document.getElementById('visitante')
         visitante.innerHTML = nome
         visitante.style.color = '#181D39'

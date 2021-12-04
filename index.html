@@ -221,6 +221,9 @@
         .linha2 {
             display: inline;
         }
+        #historia {
+            padding: 20px 3px;
+        }
         footer {
             background-color: var(--cor7);
             padding-top: 4px;
@@ -277,11 +280,13 @@
         </div>
         <form action="https://formsubmit.co/pedromatos2012@gmail.com" method="POST">
             <input type="hidden" name="_next" value="https://ipeeeed.github.io/site/sucesso.html">
-            <input type="hidden" name="_autoresponse" value="Formulário recebido, logo responderemos, obrigado." id="">
+            <input type="hidden" name="_autoresponse" value="Formulário recebido, obrigado." id="">
+            <!--<input type="hidden" name="_captcha" value="false">-->
             <h2>Ficha de Personagem:</h2>
             <p>Nome <input type="text" name="nome" required></p>
             <p>Email <input type="email" name="email" id="" placeholder="ana123@gmail.com" required></p>
             <p>Personagem <input type="text" name="personagem" required></p>
+            <p>História <input type="text" name="historia" required id="historia"></p>
             <p>
                 Sexo: <br>
             masculino<input class="linha" name="sexo" value="male" type="radio" required>
@@ -300,13 +305,13 @@
             Xamã <input class="linha" name="classes" value="xama" type="radio">
             Curandeiro <input class="linha" name="classes" value="curandeiro" type="radio">
             </p>
-            <p>Idade <input type="number" name="idade" min="15" max="60" placeholder="De 15 à 60 anos" required></p>
-            <p>Status: <br>
+            <p>Idade <input type="number" name="idade" min="15" max="60" placeholder="De 15 à 60 anos" required></p> <br>
+            <!--<p>Status: <br>
                 Morrendo <input class="linha" name="status" value="morrendo" type="checkbox">
                 Inconciente <input class="linha" name="status" value="inconciente" type="checkbox">
                 Morto <input class="linha" name="status" value="morto" type="checkbox" disabled>
                 Imobilizado <input class="linha" name="status" value="imobilizado" type="checkbox">
-            </p>
+            </p>-->
                 <input class="linha2" type="submit">
                 <input class="linha2" type="reset">
             </p>

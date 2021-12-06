@@ -44,7 +44,7 @@
         header {
             background-color: var(--cor7);
         }        
-        h1 {
+        h1, h2 {
             color: var(--cor1);
         }
         h1, h2, h3 {
@@ -91,6 +91,42 @@
         }
         a {
             text-decoration: none;
+        }
+        section {
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 4px 3px 0px 0px rgba(23, 20, 46, 0.371);
+            background-color: var(--cor7);
+            margin: 20px 300px;
+            padding: 20px 20px;
+        }
+        @media screen and (max-width: 1200px) {
+            section {
+                margin: 10px 400px;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            section {
+                margin: 10px 300px;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            section {
+                margin: 10px 200px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            section {
+                margin: 10px 100px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            section {
+                margin: 10px 50px;
+            }
+        }
+        section:hover {
+            background-color: var(--cor6);
         }
         #obras:hover {
             color: var(--cor4);
@@ -139,37 +175,6 @@
         }
         .usuarios:hover {
             color: var(--cor3);
-        }
-        img {
-            margin: 10px 520px;
-            width: 300px;
-            border-radius: 5px;
-            box-shadow: 4px 3px 0px 0px rgba(23, 20, 46, 0.371);
-        }
-        @media screen and (max-width: 1200px) {
-            img {
-                margin: 10px 400px;
-            }
-        }
-        @media screen and (max-width: 1000px) {
-            img {
-                margin: 10px 300px;
-            }
-        }
-        @media screen and (max-width: 800px) {
-            img {
-                margin: 10px 200px;
-            }
-        }
-        @media screen and (max-width: 600px) {
-            img {
-                margin: 10px 100px;
-            }
-        }
-        @media screen and (max-width: 450px) {
-            img {
-                margin: 10px 50px;
-            }
         }
         form {
             text-align: center;
@@ -252,14 +257,18 @@
             border-radius: 5px;
             
         }
-        footer {
+        #pegada {
             background-color: var(--cor7);
             padding-top: 4px;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;            
         }
-        footer:hover {
+        #pegada:hover {
             background-color: var(--cor6);
         }
-        footer:hover > marquee {
+        #pegada:hover > marquee {
             color: var(--cor2);
         }
         marquee {
@@ -274,8 +283,9 @@
             <ul class="bolinha">
                 <li class="menu"><a href="#">Menu</a></li>
                 <li class="menu"><a href="galeria.html">Galeria</a></li>
-                <li class="menu"><a href="#">teste?</a></li>
-                <li class="menu"><a href="#">Sobre</a></li>
+                <li class="menu"><a href="musica.html">Músicas</a></li>
+                <li class="menu"><a href="#">teste</a></li>
+                <li class="menu"><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
@@ -286,6 +296,7 @@
             <article>
                 <h3 id="obras" title="O site está em desenvolvimento">Em obras...</h3>
                 <p>Este site está sendo construido para estudos (por enquanto), seja muito bem vindo(a) <span id="visitante">pessoa</span>, à este projeto. Divirta-se.</p>
+                <hr>
                 <aside>
                     <h3>Titulinho</h3>
                     <p>Hello Friend! Este texto é para vocês que estão lendo agora, agradeço por terem entrado aqui, de acordo com meus planos, estou enviando este projeto para os Rangres cuja cor cada um sabe. Estarei modificando este site para que ele fique bonito para vocês. Depois expandirei e tentarei fazer deste domínio, um algo para nos divertirmos. Logo abaixo da imagem, você poderá fazer uma ficha de personagem, não há nada pronto para um rpg ainda, então é apenas para testes, mas logo estará pronto e poderemos utiliza mais recursos. Agradeço a compreensão. Thanky Friend!</p>
@@ -302,10 +313,7 @@
                 <li><a class="usuarios" href="https://www.instagram.com/nobrigalucas/?hl=pt-br" target="_blank">Lucas</a></li>
                 <li><a class="usuarios" href="https://www.instagram.com/ipeeeed/?hl=pt-br" target="_blank">Pedro</a></li>
             </ul>
-        </aside>
-        <div>
-            <img src="IMG-20200926-WA0016.jpg" alt="Teste">
-        </div>
+        </aside>        
         <form action="https://formsubmit.co/pedromatos2012@gmail.com" method="POST">
             <input type="hidden" name="_next" value="https://ipeeeed.github.io/site/sucesso.html">
             <input type="hidden" name="_autoresponse" value="Formulário recebido, obrigado." id="">
@@ -345,8 +353,11 @@
             </p>
         </form>
     </main>
-    <footer>
+    <footer id="pegada">
         <marquee behavior="" direction="left">Socorram-me, subi no ônibus em Marrocos. As tranças do rei careca. O rato roeu a roupa do rei de roma. Três pratos de trigo para três tigres tristes.</marquee>
+    </footer>
+    <footer>
+        <p>Apenas um espaço para o rodapé.</p>
     </footer>
     <script>
         //var nome = window.prompt('Digite seu nome ou nickname')

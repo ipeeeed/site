@@ -33,7 +33,7 @@
         }
         * {
             font-family: var(--fonte-funhouse);
-            color: snow;
+            color: var(--cor2);
             margin: 0px;
             padding: 0px;
         }
@@ -254,6 +254,14 @@
             border-radius: 5px;
             
         }
+        select {
+            width: 150px;
+            margin: auto;
+            padding: 3px;
+            display: block;
+            color: var(--cor1);
+            background-color: var(--cor5);
+        }
         #pegada {
             background-color: var(--cor7);
             padding-top: 4px;
@@ -318,7 +326,7 @@
             <p>Nome <input type="text" name="nome" required></p>
             <p>Email <input type="email" name="email" id="" placeholder="ana123@gmail.com" required></p>
             <p>Personagem <input type="text" name="personagem" required></p>
-            <p>Carregar imagem <input type="file" name="imagem" value="imagem" title="Envie-nos uma imagem modelo de seu personagem, requisito opcional."></p>
+            <!-- <p>Carregar imagem <input type="file" name="imagem" value="imagem" title="Envie-nos uma imagem modelo de seu personagem, requisito opcional."></p> -->
             <p>História <textarea name="historia" id="" cols="30" rows="10"></textarea required></p>
             <p>
                 Sexo: <br>
@@ -348,6 +356,44 @@
                 <input class="linha2" type="reset">
             </p>
         </form>
+        <section>
+            <aside>
+                <h2>Calculadora</h2>
+                <p>Clique abaixo para somar dois números:</p>
+                Número 1<input type="number" name="numero1" id="num1">
+                Número 2<input type="number" name="numero2" id="num2">
+                <br>
+                <input type="button" value="somar" onclick="somar()">
+                <div id="res">Resultado</div>
+            </aside>
+        </section>
+        <section>
+            <aside>
+                <h2>Tabuada</h2>
+                <div>
+                    <p>Número <input type="number" name="nume" id="nume"> <input type="button" value="Gerar tabuada" onclick="tabuada()"></p>
+                </div>
+                <div>
+                    <select name="tabuada" id="seltab" size="10">
+                        <option value="">Digite um número acima</option>
+                    </select>
+                </div>
+            </aside>
+        </section>
+        <section>
+            <aside>
+                <h2>Contador</h2>
+                <div id="dados">
+                    <p>Início: <input type="number" name="inicio" id="inic"></p>
+                    <p>Fim: <input type="number" name="fim" id="fi"></p>
+                    <p>Passo: <input type="number" name="passo" id="pas"></p>
+                    <p><input type="button" value="contar" onclick="contar()"></p>
+                </div>
+                <div id="resul">
+                    Preparando a contagem
+                </div>
+            </aside>
+        </section>
     </main>
     <footer id="pegada">
         <marquee behavior="" direction="left">Socorram-me, subi no ônibus em Marrocos. As tranças do rei careca. O rato roeu a roupa do rei de roma. Três pratos de trigo para três tigres tristes.</marquee>
@@ -360,6 +406,66 @@
         window.document.getElementById('visitante')
         visitante.innerHTML = nome
         visitante.style.color = '#677CF5'
+
+        function somar() {
+            var n1 = window.document.getElementById('num1')
+            var n2 = window.document.getElementById('num2')
+            var res = window.document.getElementById('res')
+            var nu1 = Number(n1.value)
+            var nu2 = Number(n2.value)
+            var s = nu1 + nu2
+            res.innerHTML = `A soma entre ${nu1} e ${nu2} é igual a <strong>${s}</strong>.`
+        }
+
+        function tabuada() {
+            let nume = window.document.getElementById('nume')
+            let tab = window.document.getElementById('seltab')
+            if (nume.value.length == 0) {
+                window.alert('Por favor, digite um número!')
+            } else {
+                let n = Number(nume.value)
+                let c = 1
+                tab.innerHTML = ''
+                while (c <= 10) {
+                    let item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    item.value = `tab${c}`
+                    tab.appendChild(item)
+                    c++
+                }
+            }
+        }
+
+        function contar() {
+            var ini = document.getElementById('inic')
+            var fim = document.getElementById('fi')
+            var passo = document.getElementById('pas')
+            var resul = document.getElementById('resul')
+
+            if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+                window.alert(' [ERRO] Faltam dados! ')
+                resul.innerHTML = 'Impossível contar! '
+            } else {
+                resul.innerHTML = 'Contando: <br>'
+                var i = Number(ini.value)
+                var f = Number(fim.value)
+                var p = Number(passo.value)
+                if (p <= 0) {
+                    window.alert('Passo invalido! Considerando passo 1')
+                    p = 1
+                }
+                if (i < f) {
+                    for(var con = i; con <= f; con += p) {
+                        resul.innerHTML += `${con}, `
+                    }
+                } else {
+                    for(var con = i; con >= f; con -= p) {
+                        resul.innerHTML += `${con}, `
+                    }
+                }
+                resul.innerHTML += ' Acabou! '
+            }
+        }
     </script>
 </body>
 </html>

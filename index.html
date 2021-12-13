@@ -352,6 +352,16 @@
                 Morto <input class="linha" name="status" value="morto" type="checkbox" disabled>
                 Imobilizado <input class="linha" name="status" value="imobilizado" type="checkbox">
             </p>-->
+            Item Principal<select name="itens" id="">
+                <option value="item" disabled selected>Escolha um item</option>
+                <option value="espada">Espada</option>
+                <option value="machado">Machado</option>
+                <option value="martelo">Martelo</option>
+                <option value="cajado">Cajado</option>
+                <option value="arco">Arco</option>
+                <option value="balestra">Balestra</option>
+                <option value="escudo">Escudo</option>
+            </select> <br>
                 <input class="linha2" type="submit">
                 <input class="linha2" type="reset">
             </p>
@@ -406,6 +416,9 @@
         window.document.getElementById('visitante')
         visitante.innerHTML = nome
         visitante.style.color = '#677CF5'
+        if (nome == null || nome == '' || nome == ' ') {
+            window.alert('Por favor, insira um nome!')
+        }
 
         function somar() {
             var n1 = window.document.getElementById('num1')

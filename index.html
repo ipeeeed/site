@@ -412,12 +412,19 @@
         <p>Apenas um espaço para o rodapé.</p>
     </footer>
     <script>
-        var nome = window.prompt('Digite seu nome ou nickname')
-        window.document.getElementById('visitante')
-        visitante.innerHTML = nome
-        visitante.style.color = '#677CF5'
+        var nome = window.prompt('Digite seu nome!')
         if (nome == null || nome == '' || nome == ' ') {
             window.alert('Por favor, insira um nome!')
+            while (nome == null || nome == '' || nome == ' ') {
+                var nome = window.prompt('Digite um nome válido!')
+                window.document.getElementById('visitante')
+                visitante.innerHTML = nome
+                visitante.style.color = 'white'
+            }
+        } else {
+            window.document.getElementById('visitante')
+            visitante.innerHTML = nome
+            visitante.style.color = 'white'
         }
 
         function somar() {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>teste</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btnMsg").click(function(){
+                ExibirMsgAlert();
+                // alert('') // msg + true
+                // confirm('') // msg + true or false
+                // prompt('') // msg + input + true or false
+            })
+
+            function ExibirMsgAlert(continuar){
+                Ola();
+                Mensagem();
+            }
+
+            function Ola(){
+                var oi = confirm('Olá moça, que bom que está aqui! Clique em "OK" para continuar!');
+                NaoContinue(oi);
+                var nome = 'Pedro'
+                do {
+                    nome = prompt('Digite seu primeiro nome pra mim, CORRETAMENTE!');
+                    if (nome !== 'Raquel') {
+                        alert('Digite corretamente:\nCom a primeira letra maiúscula e as demais minúsculas!')
+                    }
+                } while (nome !== 'Raquel')
+            }
+
+            function NaoContinue(valor){
+                if (valor == false){
+                    alert('ah não, vai continhar sim!');
+                }
+            }
+
+            function Mensagem(){
+                alert(`Oi Raquel, tudo bem?`)
+                alert('Queria que dizer que preparei isto rapidinho pra você, então não está lá muuuuito bonito, foi as pressas...')
+                alert('...mas eu queria que soubesse que o mais demorado foi pensar no que poderia escrever aqui pra você...')
+                alert('...você já me ajudou tanto, me deu tanta coisa, me fez tão feliz e tudo isso em tão pouco tempo...')
+                alert('...que nem sei como te agradecer!!!')
+                alert('AMO VOCÊ MULHER!!!')
+                alert('AMO POR DEMAIS!')
+                alert('TE QUERO PATODAVIDA HIHIHIHI')
+                alert('LOV U')
+                alert('<3')
+            }
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button id="btnMsg">Clique aqui</button>
+        <h1 id="viewMsg"></h1>
+    </div>
+</body>
+</html>
